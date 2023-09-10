@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+
+    <!-- Body -->
+    <body>
+        <h1>Cambiar contraseña {{user.nombre}}</h1>
+
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Actualizar</button>
+        </form>
+    </body>
+</html>

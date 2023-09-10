@@ -25,9 +25,17 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR.child('static')]
+STATIC_ROOT = BASE_DIR.child('staticfiles') #/ 'staticfiles'
 
 
 # Multimedia files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.child('media')
 
+
+# Email configuration
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = get_secret('EMAIL')
+EMAIL_HOST_PASSWORD = get_secret('EMAIL_PASSWORD')
+EMAIL_PORT = 587
